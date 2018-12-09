@@ -9,7 +9,6 @@ const Footer = () => {
             <div className="footer-content">
                 <span>
                 <h1> Rekord Space </h1>
-
                 </span>
                 <div className="icons">
                 <a href="https://www.space.rekord/login" title="Log in" className="login">LOG IN |</a> 
