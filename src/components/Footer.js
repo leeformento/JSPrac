@@ -12,9 +12,9 @@ const Footer = () => {
 
                 </span>
                 <div className="icons">
-                <a href="https://www.facebook.com/leeformento" title="Facebook Page" className="login">LOG IN |</a> 
-                <a href="https://www.facebook.com/leeformento" title="Facebook Page" className="register"> REGISTER |</a>
-                <a href="https://www.facebook.com/leeformento" title="Facebook Page" ><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="https://www.space.rekord/login" title="Log in" className="login">LOG IN |</a> 
+                <a href="https://www.space.rekord/register" title="Register" className="register"> REGISTER |</a>
+                <a href="https://www.facebook.com/leelenformento" title="Facebook Page" ><i class="fab fa-facebook-square fa-2x"></i></a>
                 <a href="https://www.instagram.com/leeformento" title="Instagram Page" ><i class="fab fa-instagram fa-2x"></i></a>
                 <a href="https://www.github.com/leeformento" title="Github Page"><i class="fab fa-github fa-2x"></i></a>
 

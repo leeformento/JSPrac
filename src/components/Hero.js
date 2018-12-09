@@ -6,7 +6,7 @@ const Nav = () => {
     return (
           <div className="hero-container">
               <img className="hero" src={hero} alt="Hero" />
-              <h1 className="slogan"> Remember <br /> everything. </h1>
+              <h1 className="slogan"> Note taking <br /> made easy. </h1>
                <div className="font-awesome">
                    <i className="fas fa-ellipsis-h fa-6x"></i>
                    </div>

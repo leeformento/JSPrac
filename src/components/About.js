@@ -7,7 +7,7 @@ const About = () => {
         <div className="about-container">
             <div className="about-text">
             <span>
-            <h1> Undeniably easy to use.</h1>
+            <h1> Undeniably simple to use.</h1>
             <p> We designed Rekord Space with you in mind. Organize your work</p>
             <p>and declutter your life. Collect the thoughts and ideas that matter,</p>
             <p> in one place, and find it when you need it fast.</p>
