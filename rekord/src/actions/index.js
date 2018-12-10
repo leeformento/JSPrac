@@ -12,8 +12,15 @@ export const DELETED = 'DELETED';
 export const ERROR = 'ERROR';
 export const FETCHING_NOTE = 'FETCHING_NOTE';
 export const FETCHED_NOTE = 'FETCHED_NOTE';
+export const FETCHING_USERS = 'FETCHING_USERS'
+export const FETCHED_USERS = 'FETCHED_USERS'
+export const SAVING_USER = 'SAVING_USER'
+export const SAVED_USER = 'SAVED_USER'
 
-//
+
+
+
+
 export const fetchNotes = () => {
     return dispatch => {
          dispatch({ type: FETCHING });
@@ -90,3 +97,16 @@ export const updateNote = note => {
         })
     }
 }
+
+export const getUsers = () => {
+    const smurfs = axios.get(`https://backend-project-lee.herokuapp.com/users`);
+    return dispatch => {
+      dispatch({type: FETCHING_USERS});
+      smurfs.then(response => {
+        dispatch({type: FETCHING_USERS, payload: response.data});
+      })
+      .catch(err => {
+        dispatch({type: ERROR, payload: err});
+      });
+    };
+  };
