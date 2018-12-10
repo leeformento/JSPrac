@@ -13,7 +13,7 @@ export const ERROR = 'ERROR';
 export const FETCHING_NOTE = 'FETCHING_NOTE';
 export const FETCHED_NOTE = 'FETCHED_NOTE';
 
-
+//
 export const fetchNotes = () => {
     return dispatch => {
          dispatch({ type: FETCHING });
