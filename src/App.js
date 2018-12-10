@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
-import Nav from './components/Nav'
-import Hero from './components/Hero'
-import About from './components/About'
-import AboutTwo from './components/AboutTwo'
-import AboutThree from './components/AboutThree'
-import Plans from './components/Plans'
-import Footer from './components/Footer'
-
-
+import { Route } from 'react-router-dom';
+import Home from './components/Home';
+import Signin from './components/Signin';
+import Signup from './components/Signup';
 import './App.css';
 
+
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      notes: []
+    }
+  }
+
+
   render() {
     return (
       <div className="App">
-         <Nav />
-         <Hero />
-         <About />
-         <Plans />
-         <AboutThree />
-         <AboutTwo />
-         <Footer/>
-
+      <Route exact path="/" component={Home} />
+      <Route path="/signin" component={Signin} />
+      <Route path="/signup" component={Signup} />
       </div>
     );
   }

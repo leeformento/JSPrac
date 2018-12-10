@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class Signin extends Component {
+class Signup extends Component {
     state = {
-        username: 'lee1',
-        password:'lee1'
+        username: '',
+        password:'',
     }
 
   render() {
@@ -30,7 +30,7 @@ class Signin extends Component {
                   />
               </div>
               <div>
-                  <button type="submit">Sign In</button>
+                  <button type="submit">Sign Up</button>
               </div>
 
           </form>
@@ -39,19 +39,16 @@ class Signin extends Component {
   }
 
   handleInputChange = event => {
-      const { name, value } = event.target;
-      this.setState({ [name]: value })
-  }
+    this.setState({ [event.target.name]: event.target.value})
+}
   handleSubmit = event => {
       event.preventDefault();
-      const endpoint = 'http://backend-project-lee.herokuapp.com/login'
-      console.log(this.state);
+      const endpoint = 'http://backend-project-lee.herokuapp.com/register'
       axios
       .post(endpoint, this.state)
       .then(res => {
-          console.log(res.data);
           localStorage.setItem('jwt', res.data.token)
-          this.props.history.push('/notes');
+          this.props.history.push('/users');
       })
       .catch(err => {
           console.error('ERROR!', err)
@@ -59,4 +56,4 @@ class Signin extends Component {
   }
 }
 
-export default Signin;
+export default Signup;
