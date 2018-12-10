@@ -43,7 +43,7 @@ class Signup extends Component {
 }
   handleSubmit = event => {
       event.preventDefault();
-      const endpoint = 'http://backend-project-lee.herokuapp.com/register'
+      const endpoint = 'https://backend-project-lee.herokuapp.com/notes/register'
       axios
       .post(endpoint, this.state)
       .then(res => {
