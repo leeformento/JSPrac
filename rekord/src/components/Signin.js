@@ -3,8 +3,8 @@ import axios from 'axios';
 
 class Signin extends Component {
     state = {
-        username: 'lee1',
-        password:'lee1'
+        username: '',
+        password:''
     }
 
   render() {
@@ -44,7 +44,7 @@ class Signin extends Component {
   }
   handleSubmit = event => {
       event.preventDefault();
-      const endpoint = 'http://backend-project-lee.herokuapp.com/login'
+      const endpoint = 'https://backend-project-lee.herokuapp.com/login'
       console.log(this.state);
       axios
       .post(endpoint, this.state)
