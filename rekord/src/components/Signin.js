@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import logo from './assets/logo2.svg'
+import logo from './assets/logo2.svg';
+import Facebook  from './Facebook';
 
 class Signin extends Component {
     state = {
@@ -10,7 +11,7 @@ class Signin extends Component {
 
   render() {
     return (
-      <div className="form-container">        
+      <div className="form-container">
           <form onSubmit={this.handleSubmit}>
           <img className="logo-login" src={logo} alt="Logo" />
           <h1> Remember everything important.</h1>
@@ -35,7 +36,8 @@ class Signin extends Component {
                   />
               </div>
               <div>
-                  <button className="form__button" type="submit">Sign In</button>
+                  <button className="form__button"  type="submit">Sign In</button>
+                  <Facebook />
               </div>
 
           </form>

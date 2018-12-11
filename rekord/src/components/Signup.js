@@ -27,10 +27,10 @@ class Signup extends Component {
                   <label htmlFor="password"></label>
                   <input
                   name="password"
-                  placeholder="password"
                   value={this.state.password}
                   onChange={this.handleInputChange}
                   type="password"
+                  placeholder="password"
                   />
               </div>
               <div>
