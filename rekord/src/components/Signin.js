@@ -10,8 +10,7 @@ class Signin extends Component {
 
   render() {
     return (
-      <div className="form-container">
-          
+      <div className="form-container">        
           <form onSubmit={this.handleSubmit}>
           <img className="logo-login" src={logo} alt="Logo" />
           <h1> Remember everything important.</h1>

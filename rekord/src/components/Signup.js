@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import logo from './assets/logo2.svg'
 
 class Signup extends Component {
     state = {
@@ -9,28 +10,31 @@ class Signup extends Component {
 
   render() {
     return (
-      <div>
+    <div className="form-container">
           <form onSubmit={this.handleSubmit}>
-              <div>
-                  <label htmlFor="username">Username</label>
+          <img className="logo-login" src={logo} alt="Logo" />
+          <div className="user-container">
+                  <label htmlFor="username"></label>
               <input 
-              name="username" 
+              name="username"
+              placeholder="username"
               value={this.state.username}
               onChange={this.handleInputChange} 
               type="text"
               />
               </div>
-              <div>
-                  <label htmlFor="password">Password</label>
+              <div className="password-container">
+                  <label htmlFor="password"></label>
                   <input
                   name="password"
+                  placeholder="password"
                   value={this.state.password}
                   onChange={this.handleInputChange}
                   type="password"
                   />
               </div>
               <div>
-                  <button type="submit">Sign Up</button>
+                  <button className="form__button" type="submit">Sign Up</button>
               </div>
 
           </form>
