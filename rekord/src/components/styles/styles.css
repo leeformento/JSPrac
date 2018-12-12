@@ -8,7 +8,6 @@
     display: flex;
     justify-content: space-between;
 
-
 }
 
 .nav-items-container .nav-items {
@@ -17,9 +16,6 @@
     align-items: center;
     padding-right:80px;
     font-size: 1.8rem;
-
- 
-
 
 }
 
@@ -634,6 +630,423 @@ background-color: #5bacc5;
 
 .facebook-container {
     font-size: 1rem;
+}
+
+/* NOTES */
+/* .notes-note-container {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+    border: 1px solid red;
+    display: block;
+} */
+
+.app-container {
+    max-width: 1300px;
+    margin: 20px auto;
+    min-height: 500px;
+    min-width: 700px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px #676767;
+  }
+  @media (min-width: 0) {
+    .app-container {
+      margin: 0 auto;
+      height: 100vh;
+    }
+  }
+  @media (min-width: 1300px) {
+    .app-container {
+      margin: 20px auto;
+      height: calc(100vh - 40px);
+    }
+  }
+  
+  #panel #noteslist #tools, #panel .note {
+    border-bottom: 2px solid #4a5059;
+  }
+  
+  .tag {
+    margin: 0.3em 0.3em 0.2em 0;
+    border-radius: 13px;
+    height: 23px;
+    border: 2px solid #cfcfcf;
+    color: #878481;
+    background-color: transparent;
+    min-width: 42px;
+    width: auto;
+    text-align: center;
+    display: inline-block;
+    line-height: 0.85em;
+    font-size: 0.85rem;
+  }
+  .tag .selected {
+    border: 2px solid #62656d;
+    color: #95999d;
+  }
+  .tag span {
+    display: inline-block;
+    margin: 0.59em 1.42em 0;
+  }
+  
+  .header {
+    height: 65px;
+  }
+  
+  #panel {
+    background-color: #333;
+    width: 300px;
+    height: 100%;
+    float: left;
+  }
+  #panel #tabs {
+    background-color: #474747;
+  }
+  #panel #tabs li {
+    float: left;
+    width: 75px;
+    height: 65px;
+    font-size: 22px;
+    text-align: center;
+    position: relative;
+  }
+  #panel #tabs li.selected {
+    background-color: #333;
+  }
+  #panel #tabs li.selected span {
+    color: #fff;
+  }
+  #panel #tabs li .fa {
+    color: #cdcdcf;
+    margin-top: 23px;
+  }
+  #panel #tabs li .fa:hover {
+    color: #fff;
+  }
+  #panel #tabs li .tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 4px 6px;
+    border-radius: 2px;
+    font-size: 0.6em;
+    position: absolute;
+    top: 0;
+    left: 43px;
+    z-index: 10;
+    transition-property: visibility;
+  }
+  #panel #tabs li a:hover .tooltiptext {
+    visibility: visible;
+    transition-delay: 650ms;
+  }
+  #panel .currentpanel {
+    display: block !important;
+  }
+  #panel #noteslist {
+    display: none;
+  }
+  #panel #noteslist #tools {
+    text-align: center;
+    height: 56px;
+  }
+  #panel #noteslist #tools:last-of-type {
+    border-top: 1px solid #4a5059;
+  }
+  #panel #noteslist #tools .newnote {
+    box-sizing: border-box;
+    height: 36px;
+    width: 120px;
+    float: right;
+    border-radius: 3px;
+    background-color: #4a90e2;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+    margin: 10px;
+  }
+  #panel #noteslist #tools .newnote:hover {
+    background-color: #3080de;
+  }
+  #panel #noteslist #tools .sort {
+    cursor: pointer;
+    float: left;
+    color: #fff;
+    margin-top: 18px;
+    margin-left: 14px;
+    position: relative;
+  }
+  #panel #noteslist #tools .sort span {
+    margin: auto 5px;
+  }
+  #panel #noteslist #tools .sort ul {
+    cursor: default;
+    text-align: left;
+    display: none;
+    z-index: 20;
+    position: absolute;
+    height: 120px;
+    width: 130px;
+    background-color: #474747;
+    top: 22px;
+    font-size: 1.1rem;
+    color: #dee5ed;
+    font-weight: bold;
+    line-height: 2.2rem;
+    border: 1px solid #616161;
+    padding: 8px 3px 8px 10px;
+    box-shadow: 0 2px 17px 2px black;
+  }
+  #panel #noteslist #tools .sort:hover ul {
+    display: block;
+  }
+  #panel #noteslist #tools:before, #panel #noteslist #tools:after {
+    content: '';
+    display: table;
+  }
+  #panel #noteslist #tools:after {
+    clear: both;
+  }
+  #panel .body {
+    overflow-y: scroll;
+  }
+  @media (min-width: 0) {
+    #panel .body {
+      height: calc(100vh - 65px - 56px - 2px);
+    }
+  }
+  @media (min-width: 1300px) {
+    #panel .body {
+      height: calc(100vh - 65px - 56px - 42px);
+    }
+  }
+  #panel .note {
+    cursor: default;
+height:100%;
+    padding: 10px 14px;
+    margin: 0;
+    color: #8f959b;
+  }
+  #panel .note h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #dee5ed;
+    font-weight: bold;
+    padding-right: 12px;
+  }
+  #panel .note p {
+    margin: 7px 0;
+    padding-right: 12px;
+  }
+  #panel .note .date {
+    margin: 2px 0 0;
+    float: left;
+    font-size: 0.9rem;
+  }
+  #panel .note .action {
+    margin: 0 2px 0 15px;
+    float: right;
+    font-size: 1.3em;
+    visibility: hidden;
+    cursor: pointer;
+  }
+  #panel .note .action:hover {
+    color: #fff;
+  }
+  #panel .note.selected {
+    background-color: black;
+  }
+  #panel .note.selected:hover {
+    background-color: black !important;
+  }
+  #panel .note:hover {
+    background-color: #212121;
+  }
+  #panel .note:hover .action {
+    visibility: visible;
+  }
+  
+  #edit {
+    height: 100%;
+    background-color: #fff;
+    color: #212121;
+  }
+
+  #edit #tools {
+    background-color: #f2f2f2;
+  }
+  #edit #tools .menu-toggle {
+    width: 30px;
+    height: 52px;
+    float: right;
+    text-align: center;
+    padding-top: 12px;
+    padding-right: 27px;
+  }
+  #edit #tools .menu-toggle span {
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 24px;
+    color: #767676;
+    line-height: 42px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  #edit #tools .menu-toggle span:hover {
+    background-color: #ababab;
+    color: #fff;
+  }
+  #edit #tools #tags {
+    box-sizing: border-box;
+    padding-top: 15px;
+    float: left;
+    height: 65px;
+    max-width: calc(100% - 300px - 265px);
+  }
+  #edit #tools #tags li {
+    margin-right: 10px;
+    display: inline-block;
+  }
+  #edit #tools #toolbar {
+    margin-top: 17px;
+    margin-left: 19px;
+    box-sizing: border-box;
+    float: left;
+    height: 40px;
+    max-width: calc(100% - 300px - 265px);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  @media (min-width: 0) {
+    #edit #tools #toolbar {
+      width: 100px;
+    }
+  }
+  @media (min-width: 768px) {
+    #edit #tools #toolbar {
+      width: 300px;
+    }
+  }
+  #edit #tools #toolbar li {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 30px;
+    min-width: 26px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  #edit #tools #toolbar li > span {
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 14px;
+    display: inline-block;
+    color: #545454;
+    cursor: pointer;
+    margin: 8px;
+  }
+  #edit #tools #toolbar li > span.fa {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  #edit #tools #toolbar li:hover {
+    color: #fff;
+    border-color: #ccc;
+    box-shadow: 0 1px 1px #888;
+    background-color: #d8d8d8;
+  }
+  #edit #tools #actions {
+    float: right;
+    width: 195px;
+    height: calc(100% - 65px);
+    background-color: #d9e8f9;
+  }
+  #edit #tools #actions li {
+    text-align: center;
+    margin: 12px 8px;
+    display: inline-block;
+  }
+  #edit #tools #actions span {
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 8px;
+    border-radius: 50%;
+    height: 44px;
+    width: 44px;
+    font-size: 21px;
+    line-height: 1rem;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    color: #4a90e2;
+    vertical-align: middle;
+    display: table-cell;
+    margin: 0 auto;
+  }
+  #edit #tools #actions span:hover {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+    color: #fff;
+  }
+  #edit #editor {
+    font-family: "Roboto Mono", monospace;
+    overflow-y: hidden;
+    float: left;
+    height: calc(100% - 65px);
+    width: calc(100% - 300px);
+    background-color: #fff;
+  }
+  #edit #editor input {
+    box-sizing: border-box;
+    padding: 0 45px;
+    font-size: 1.45rem;
+    width: 100%;
+    height: calc(56px + 2px);
+    line-height: calc(56px + 2px);
+    font-weight: 500;
+    outline: none;
+    overflow: none;
+    box-shadow: none;
+    border: 0;
+    border-bottom: 2px solid #f2f2f2;
+  }
+  #edit #editor #content {
+    box-sizing: border-box;
+    padding: 14px 45px;
+    font-size: 1.1rem;
+    width: 100%;
+    resize: none;
+    overflow-y: hidden;
+    height: 500px;
+    outline: none;
+    overflow: none;
+    box-shadow: none;
+    border: 0;
+  }
+  #edit #editor [contentEditable=true]:empty:before {
+    content: attr(data-text);
+    color: #b1a9a9;
+  }
+  
+
+
+  .add-note {
+    padding: 10px 20px;  
+    border: none; 
+    border-radius: 5px; 
+    color: aliceblue;
+    background-color: #53caee; 
+    outline: none; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    font-family: 'Poppins', sans-serif;
 }
 
 

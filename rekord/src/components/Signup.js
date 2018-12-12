@@ -13,6 +13,7 @@ class Signup extends Component {
     <div className="form-container">
           <form onSubmit={this.handleSubmit}>
           <img className="logo-login" src={logo} alt="Logo" />
+          <h1> Remember everything important.</h1>
           <div className="user-container">
                   <label htmlFor="username"></label>
               <input 
