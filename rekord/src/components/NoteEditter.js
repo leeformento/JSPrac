@@ -136,7 +136,7 @@ class NoteEditter extends Component {
                             <button className="add-note" onClick={this.updateNote}>
                                 update <i className="fas fa-check"></i>
                             </button>
-                            <button onClick={() => this.props.deleteNote(this.props.match.params.id)}>X</button>
+                            <button lassName="add-note" onClick={() => this.props.deleteNote(this.props.match.params.id)}>X</button>
                             </div>
 
                         )
