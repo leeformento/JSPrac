@@ -16,6 +16,7 @@ class NotesNote extends Component {
                      <div className="note">
                          <Link to={`/notesview/${note.id}`}>
                              <NotesList title={note.title} content={note.textBody} />
+                             
                          </Link>
                          </div>
                      </div>

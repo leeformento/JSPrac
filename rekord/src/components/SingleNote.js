@@ -27,16 +27,18 @@ import Edit from './Edit';
         if (!this.props.fetched){
             return (<div></div>)	          }
         return (
-            <div>
+    <section id="edit">
+                <div className="header" id="tools"> 
                 <NotesList title={this.props.note.title} 
                 content={this.props.note.textBody} />
                 <button onClick={this.toggleUpdate}>Update</button>
-                <button onClick={() => this.props.deleteNote(this.props.match.params.id)}>X</button>
+                <button onClick={() => this.props.deleteNote(this.props.match.params.id)}>Delete</button>
                 {this.state.updateActive !== false
                     ? <Edit updateNote={this.props.updateNote} id={this.props.match.params.id} />
                     : null
                 }
                 </div>
+                </section>
         )
     }
 }
