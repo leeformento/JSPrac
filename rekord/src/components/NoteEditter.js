@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { deleteNote, updateNote, fetchNotes } from '../actions';
+import { deleteNote, updateNote, fetchNotes, addNote } from '../actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
@@ -64,7 +64,32 @@ class NoteEditter extends Component {
 
     addNote = event => {
         event.preventDefault();
+
+        let note = {
+            title: this.state.title,
+            content: this.state.content
+        };
+        this.props.addNote(note, this.props.history);
+
+        setTimeout(() => {
+            this.props.fetchNotes();
+        }, 1000);
     }
+
+    deleteNote = event => {
+        event.preventDefault();
+
+        let note = {
+            title: this.state.title,
+            content: this.state.content
+        };
+        this.props.deleteNote(note, this.props.history);
+
+        setTimeout(() => {
+            this.props.fetchNotes();
+        }, 1000);
+    }
+
 
     render() {
         let title = this.state.title;
@@ -86,7 +111,7 @@ class NoteEditter extends Component {
                   <div className="menu-toggle"><span className="fa fa-ellipsis-v"></span></div>
                 </div>
                 <div id="editor">
-                  <form onSubmit={this.addNote}>
+                  <form>
                     <input 
                         className="input-title"
                         type="text" 
@@ -107,9 +132,13 @@ class NoteEditter extends Component {
 
                     {
                         noteId && (
+                            <div>
                             <button className="add-note" onClick={this.updateNote}>
                                 update <i className="fas fa-check"></i>
                             </button>
+                            <button onClick={() => this.props.deleteNote(this.props.match.params.id)}>X</button>
+                            </div>
+
                         )
                     }
 
@@ -137,7 +166,7 @@ const mapStateToProps = state => {
     }
 }
 
-export default withRouter(connect(mapStateToProps, { deleteNote, updateNote, fetchNotes })( NoteEditter ))
+export default withRouter(connect(mapStateToProps, { deleteNote, updateNote, fetchNotes, addNote })( NoteEditter ))
 
 
 

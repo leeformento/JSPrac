@@ -32,7 +32,7 @@ import Edit from './Edit';
                 <NotesList title={this.props.note.title} 
                 content={this.props.note.textBody} />
                 <button onClick={this.toggleUpdate}>Update</button>
-                <button onClick={() => this.props.deleteNote(this.props.match.params.id)}>Delete</button>
+                <button onClick={() => this.props.deleteNote(this.props.match.params.id)}>X</button>
                 {this.state.updateActive !== false
                     ? <Edit updateNote={this.props.updateNote} id={this.props.match.params.id} />
                     : null

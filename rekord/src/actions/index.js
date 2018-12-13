@@ -15,11 +15,13 @@ export const FETCHED_NOTE = 'FETCHED_NOTE';
 
 
 export const fetchNotes = () => {
+    console.log("------ fetchNotes() fired");
     return dispatch => {
          dispatch({ type: FETCHING });
          axios
          .get('https://backend-project-lee.herokuapp.com/notes')
          .then(response => {
+            console.log("Pushar: fetchNotes: ", response.data);
              dispatch({ type: FETCHED, payload: response.data });
             })
             .catch(error => {
@@ -38,11 +40,10 @@ export const addNote = (note, history) => {
         .then(response => {
             dispatch({ type: SAVED, payload: response.data })
         })
-        .then(response => history.push('/'))
         .catch(error => {
             dispatch({ type: ERROR, payload: error })
         })
- }
+    }
 }
 
 export const fetchNote = id => {
@@ -83,7 +84,7 @@ export const updateNote = note => {
             textBody: note.content
         })
         .then(response => {
-            dispatch({ type: UPDATED, payload: response.data})
+            dispatch({ type: UPDATED, payload: response.data});
         })
         .catch(error => {
             dispatch({type: ERROR, payload: error})

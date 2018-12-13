@@ -18,7 +18,7 @@ import React, { Component } from 'react'
             title: this.state.title,
             content: this.state.content
         }
-        this.props.updateNote(updatedNote,this.props.history);
+        this.props.updateNote(updatedNote, this.props.history);
         this.setState({
             title: '',
             content: ''

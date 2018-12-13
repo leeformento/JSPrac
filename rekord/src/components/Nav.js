@@ -16,7 +16,6 @@ const Nav = () => {
         {/* <Route path="/signin" component={Signin} /> */}
         <Link to={"/signin"}> LOG IN &nbsp;| &nbsp;</Link>
         <Link to={"/signup"}> REGISTER &nbsp;| &nbsp; </Link>
-        <Link to={"/notesview"}> NOTES </Link>
 
 
         </div>

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import * as actions from '../actions'
 import { connect } from 'react-redux';
 import NotesNote from './NotesNote';
-import SingleNote from './SingleNote';
 import { withRouter, Route, Switch, Link } from 'react-router-dom';
 
 import NoteEditter from './NoteEditter';

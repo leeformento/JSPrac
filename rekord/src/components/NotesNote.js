@@ -5,9 +5,6 @@ import NotesList from './NotesList';
 class NotesNote extends Component {
   
   render() {
-  //   if (this.props.fetching){
-  //     return (<div></div>)
-  // }
     return (
         <div>
       {this.props.notes.map(note => {
