@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './assets/logo2.svg'
+import logo from './assets/logo2.png'
 import './styles/styles.css';
 // import { BrowserRouter as Router } from 'react-router';
 // import { NavLink } from 'react-router-dom';
