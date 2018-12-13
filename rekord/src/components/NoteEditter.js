@@ -144,7 +144,7 @@ class NoteEditter extends Component {
 
                     {
                         !noteId && (
-                            <button className="add-note" onClick={this.addNote}>
+                            <button className="update-note" onClick={this.addNote}>
                                 Add Note<i className="fas fa-check"></i>
                             </button>
                         )

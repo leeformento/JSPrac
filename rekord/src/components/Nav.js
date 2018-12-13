@@ -15,7 +15,7 @@ const Nav = () => {
         <NavLink to="/signup"> &nbsp; &nbsp;REGISTER</NavLink> */}
         {/* <Route path="/signin" component={Signin} /> */}
         <Link to={"/signin"}> LOG IN &nbsp;| &nbsp;</Link>
-        <Link to={"/signup"}> REGISTER &nbsp;| &nbsp; </Link>
+        <Link to={"/signup"}> REGISTER &nbsp; </Link>
 
 
         </div>

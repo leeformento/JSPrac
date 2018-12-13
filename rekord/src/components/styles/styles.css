@@ -1052,6 +1052,23 @@ height:100%;
     top: 20;
 }
 
+.update-note {
+
+    padding: 0px 40px 0px 20px;  
+    margin-top: -120px;
+    margin-right: 30px;
+    border: none; 
+    border-radius: 5px; 
+    color: aliceblue;
+    background-color: #53caee; 
+    outline: none; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 20;
+
+}
 
 /* // SINGLE NOTE CONTAINER */
 .single-note-container {
