@@ -1,0 +1,18 @@
+FROM node:9 alpine
+
+ENV NODE_ENV production
+
+RUN mkdir /rekord
+WORKDIR /rekord
+
+COPY package-lock.json /rekord
+COPY package.json /rekord
+
+RUN npm install
+
+COPY ./rekord
+RUN npm run build
+
+EXPOSE 4000
+
+CMD ["node", ]

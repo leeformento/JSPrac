@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import logo from './assets/logo2.svg';
+import logo from './assets/logo2.png';
 import Facebook  from './Facebook';
 
 class Signin extends Component {
